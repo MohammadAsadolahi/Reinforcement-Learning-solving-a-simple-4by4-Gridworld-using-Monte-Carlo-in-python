@@ -61,7 +61,7 @@ and we initialize Q table like:
     (3, 2): {'U': 0, 'L': 0, 'R': 0}}
   
 we start using monte carlo sampling accordint to our generated policy. we play untill end of the episode and after episode termination we count over every transiton in reverse and use the transiton reward to update Q-table and as well as policy till convergence of policy witch will be optimal policy  
-for choosing next action we use epsilon greedy method. for more information about epsilon greedy method go to :https://www.geeksforgeeks.org/epsilon-greedy-algorithm-in-reinforcement-learning/
+for choosing next action at each state of game we use epsilon greedy method. for more information about epsilon greedy method go to :https://www.geeksforgeeks.org/epsilon-greedy-algorithm-in-reinforcement-learning/      
   sample outputs of program :
   
  ***************************

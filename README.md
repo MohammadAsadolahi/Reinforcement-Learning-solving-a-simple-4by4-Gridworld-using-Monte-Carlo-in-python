@@ -60,108 +60,108 @@ and we initialize Q table like:
     (3, 1): {'U': 0, 'L': 0, 'R': 0},
     (3, 2): {'U': 0, 'L': 0, 'R': 0}}
   
-then we start using monte carlo sampling accordint to our generated policy to update this Q-table and as well as policy till convergence of policy witch will be optimal policy  
-  sample outputs:
+we start using monte carlo sampling accordint to our generated policy. we play untill end of the episode and after episode termination we count over every transiton in reverse and use the transiton reward to update Q-table and as well as policy till convergence of policy witch will be optimal policy  
+  sample outputs of program :
   
  ***************************
  random generated policy is:
 ***************************
- | D |  | L |  | R |  | D |   
- | U |  | U |  | R |  | D |   
- | D |  | R |  | R |  | U |   
- | U |  | L |  | R |   
+          | D |  | L |  | R |  | D |   
+          | U |  | U |  | R |  | D |   
+          | D |  | R |  | R |  | U |   
+          | U |  | L |  | R |   
 
   --------------------------------  
  step:0   
    --------------------------------  
    
        Policy:  
- | D |  | D |  | L |  | L |   
- | U |  | L |  | L |  | U |   
- | D |  | D |  | D |  | D |   
- | U |  | R |  | R |   
+          | D |  | D |  | L |  | L |   
+          | U |  | L |  | L |  | U |   
+          | D |  | D |  | D |  | D |   
+          | U |  | R |  | R |   
 
   --------------------------------  
  step:25   
    --------------------------------  
    
        Policy:  
- | R |  | D |  | L |  | L |   
- | R |  | R |  | D |  | U |   
- | D |  | D |  | D |  | D |   
- | R |  | R |  | R |   
+          | R |  | D |  | L |  | L |   
+          | R |  | R |  | D |  | U |   
+          | D |  | D |  | D |  | D |   
+          | R |  | R |  | R |   
 
   --------------------------------  
  step:50  
    --------------------------------  
         Policy:  
- | R |  | D |  | L |  | L |   
- | R |  | R |  | D |  | U |   
- | D |  | D |  | D |  | D |   
- | R |  | R |  | R |   
+          | R |  | D |  | L |  | L |   
+          | R |  | R |  | D |  | U |   
+          | D |  | D |  | D |  | D |   
+          | R |  | R |  | R |   
 
   --------------------------------  
  step:75   
    --------------------------------  
           Policy:  
- | R |  | D |  | L |  | L |   
- | R |  | R |  | D |  | U |   
- | D |  | D |  | D |  | D |   
- | R |  | R |  | R |   
+          | R |  | D |  | L |  | L |   
+          | R |  | R |  | D |  | U |   
+          | D |  | D |  | D |  | D |   
+          | R |  | R |  | R |   
 
   --------------------------------  
  step:100   
    --------------------------------  
         Policy:  
- | R |  | D |  | L |  | L |   
- | R |  | R |  | D |  | U |   
- | D |  | D |  | D |  | D |   
- | R |  | R |  | R |   
+          | R |  | D |  | L |  | L |   
+          | R |  | R |  | D |  | U |   
+          | D |  | D |  | D |  | D |   
+          | R |  | R |  | R |   
 
   --------------------------------  
  step:125
    --------------------------------  
           Policy:  
- | R |  | D |  | L |  | L |   
- | R |  | R |  | D |  | U |   
- | D |  | D |  | D |  | D |   
- | R |  | R |  | R |   
+          | R |  | D |  | L |  | L |   
+          | R |  | R |  | D |  | U |   
+          | D |  | D |  | D |  | D |   
+          | R |  | R |  | R |   
   
 --------------------------------  
  step:150
  --------------------------------  
         Policy:  
- | R |  | D |  | L |  | L |   
- | R |  | R |  | D |  | U |   
- | D |  | D |  | D |  | D |   
- | R |  | R |  | R |   
+          | R |  | D |  | L |  | L |   
+          | R |  | R |  | D |  | U |   
+          | D |  | D |  | D |  | D |   
+          | R |  | R |  | R |   
 
   --------------------------------  
  step:175   
    --------------------------------  
           Policy:  
- | R |  | D |  | L |  | L |   
- | R |  | R |  | D |  | U |    
- | D |  | D |  | D |  | D |   
- | R |  | R |  | R |   
+          | R |  | D |  | L |  | L |   
+          | R |  | R |  | D |  | U |    
+          | D |  | D |  | D |  | D |   
+          | R |  | R |  | R |   
 
   --------------------------------  
  step:200   
    --------------------------------  
              Policy:  
- | R |  | D |  | L |  | L |   
- | R |  | R |  | D |  | U |    
- | D |  | D |  | D |  | D |   
- | R |  | R |  | R |   
+          | R |  | D |  | L |  | L |   
+          | R |  | R |  | D |  | U |    
+          | D |  | D |  | D |  | D |   
+          | R |  | R |  | R |   
 
   --------------------------------  
  step:225 
    --------------------------------  
              Policy:  
- | R |  | D |  | L |  | L |   
- | R |  | R |  | D |  | U |   
- | D |  | D |  | D |  | D |   
- | R |  | R |  | R |   
+          | R |  | D |  | L |  | L |   
+          | R |  | R |  | D |  | U |   
+          | D |  | D |  | D |  | D |   
+          | R |  | R |  | R |   
  
    --------------------------------  
  Q-table:
@@ -180,8 +180,7 @@ then we start using monte carlo sampling accordint to our generated policy to up
           (2, 3): {'U': -0.17710315668212362, 'L': 0.07079802717090475, 'D': 2.2025787785151425},
           (3, 0): {'U': -0.061445018480211534, 'R': -0.07837951530860222}, 
           (3, 1): {'U': -0.14749083099901897, 'L': -0.029828637303674892, 'R': 1.4299351028815779}, 
-          (3, 2): {'U': 1.0640013704042732, 'L': -2.2750343869388443, 'R': 4.499853592119016}}  
-          
-  ----------------------------
+          (3, 2): {'U': 1.0640013704042732, 'L': -2.2750343869388443, 'R': 4.499853592119016}      
+            
     exploited:7984250  explored:1407712
-  --------------------------------  
+ 

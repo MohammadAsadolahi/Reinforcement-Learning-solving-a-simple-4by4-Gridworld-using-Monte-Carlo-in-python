@@ -135,10 +135,13 @@ class GridWorld:
         if (row, column) in self.rewards:
             return action, (row, column), self.rewards[(row, column)]
         return action, (row, column), 0
+    
 enviroment = GridWorld()
 policy = enviroment.getRandomPolicy()
 enviroment.printPolicy(policy)
-explorationRate=0.15
+
+explorationRate=0.1
+
 for i in range(250):
     estimatedQ = copy.deepcopy(enviroment.qTable)
     for state in estimatedQ:
@@ -165,11 +168,15 @@ for i in range(250):
             rewards +=0.9*(reward[0])
             estimatedQ[q[0][0]][q[0][1]] = estimatedQ[q[0][0]][q[0][1]] + ((1 / collectedSampls) * (rewards - estimatedQ[q[0][0]][q[0][1]]))
     enviroment.updateQtable(estimatedQ)
+    
     for state in policy:
         policy[state] = max(enviroment.qTable[state], key=enviroment.qTable[state].get)
+    
     if (i+1)%25==0:
         print(f"\n\n\n step:{i}")
         enviroment.printPolicy(policy)
+        
 print("Q-table:")
 enviroment.printQtable()
+
 print(f"exploited:{enviroment.exploited}  explored:{enviroment.explored}")

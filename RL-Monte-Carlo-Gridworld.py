@@ -106,9 +106,6 @@ enviroment.printPolicy(policy)
 
 for i in range(1001):
   estimatedQ = copy.deepcopy(enviroment.qTable)
-  for state in estimatedQ:
-      for action in estimatedQ[state]:
-          estimatedQ[state][action] = 0
   collectedSampls = 0
   for j in range(1000):
     trajectory = []

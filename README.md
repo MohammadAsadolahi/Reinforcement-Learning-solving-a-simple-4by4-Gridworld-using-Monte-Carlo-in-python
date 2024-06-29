@@ -1,9 +1,7 @@
 # Reinforcement-Learning-solving-a-simple-4by4-Gridworld-using-Monte-Carlo
 solving a simple 4*4 Gridworld almost similar to openAI gym frozenlake using Monte-Carlo method Reinforcement Learning
+![4*4 gridworld](https://github.com/MohammadAsadolahi/Reinforcement_Learning_solving_a_simple_4_4_Gridworld_using_SARSA-in-python/blob/main/a%20simple%204%20by%204%20Gridworld.png)
 
-WRITTEN BY MOHAMMAD ASADOLAHI  
-Mohammad.E.Asadolahi@gmail.com  
-https://github.com/mohammadAsadolahi  
 this program is using Reinfrocement learning to solve a 4*4 gridworld like frozen lake enviroment in open ai gym  
 the method used is policy iteration whitch is one of fundamental manners of Dynamic Programing  
 

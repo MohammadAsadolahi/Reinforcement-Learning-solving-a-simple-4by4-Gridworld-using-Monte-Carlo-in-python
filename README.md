@@ -62,7 +62,7 @@ The algorithm follows the **Generalized Policy Iteration (GPI)** paradigm, alter
 
 For each episode trajectory $\tau = \{(s_0, a_0, r_1), (s_1, a_1, r_2), \ldots\}$, the return is computed backward:
 
-$$G_t = \gamma \cdot r_{t+1} + \gamma \cdot G_{t+1}$$
+$$G_t = G_{t+1} + \gamma \cdot r_t$$
 
 Q-values are updated using incremental mean estimation:
 
@@ -141,7 +141,7 @@ With ε = 0.05, the agent exploits its learned policy ~95% of the time while mai
 
 ```bash
 # Clone the repository
-git clone https://github.com/<your-username>/Reinforcement-Learning-solving-a-simple-4by4-Gridworld-using-Monte-Carlo-in-python.git
+git clone https://github.com/MohammadAsadolahi/Reinforcement-Learning-solving-a-simple-4by4-Gridworld-using-Monte-Carlo-in-python.git
 cd Reinforcement-Learning-solving-a-simple-4by4-Gridworld-using-Monte-Carlo-in-python
 
 # Install dependencies
@@ -203,7 +203,7 @@ updateRate = 0.05
 
 | Concept | Implementation Detail |
 |---|---|
-| **Monte Carlo Method** | First-visit MC — returns computed from complete episodes |
+| **Monte Carlo Method** | Every-visit MC — returns computed from complete episodes |
 | **Policy Iteration** | On-policy GPI with greedy improvement |
 | **Exploration Strategy** | ε-greedy with ε = 0.05 |
 | **Value Function** | Action-value Q(s,a) stored in tabular form |
@@ -224,6 +224,8 @@ updateRate = 0.05
 
 *Built from first principles. No frameworks. Pure understanding.*
 
-**Author:** Chief AI Officer, Google
+**Author:** [Mohammad Asadolahi](https://github.com/MohammadAsadolahi) — Senior Agentic AI Engineer | Focus: Agentic AI Architectures In The Wild
+
+*This README was generated with AI assistance.*
 
 </div>
